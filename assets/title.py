@@ -66,6 +66,15 @@ comp_wins = pyfiglet.figlet_format("Computer wins the round!")
 win_text = pyfiglet.figlet_format("YOU WIN!")
 lose_text = pyfiglet.figlet_format("YOU LOST YOU SUCK")
 
+instru_game = f"""
+
+                INSTRUCTIONS:
+        choose from the choices provide
+                    r - rock
+                    p - paper
+                    s - scissors
+"""
+
 
 def main_test():
     print(title_screen)
@@ -73,6 +82,8 @@ def main_test():
         print(game_images[i])
     print(player_wins)
     print(comp_wins)
+    print(instru_game)
+
 
     print(win_text, lose_text)
 

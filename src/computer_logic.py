@@ -4,9 +4,14 @@ computer moves in the game, this is not
 to be taken seriouly if seen so yeah
 """
 
+values = {
+   "r":0,
+   "p":1,
+   "s":2
+}
+
 # uses random module as main psuedo AI
 import random as r
-from logic import values
 
 
 # test for the computer choices if it works

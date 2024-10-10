@@ -15,21 +15,21 @@ ___/   ____)
       (_____)
       (_____)
       (____)
----\__(___)
+---\\__(___)
 ''','''
     _______
 ___/   ____)____
           ______)
            ______)
           ______)
-----\_________)
+----\\_________)
 ''','''
     _______
 ___/   ____)____
           ______)
         _________)
         (____)
-----\___(___)
+----\\___(___)
 '''
 ]
 
@@ -41,21 +41,21 @@ ___/   ____)        |               WELCOME TO ROCK PAPER SCISSORS GAME!
       (_____)       |               
       (_____)       |       This game is a recreation by DAN-SCI during the
       (____)        |   5th week of colleg and classes were suspended because of a 
----\__(___)         |   stupid storm. So he decided to create a CLI game and this is
+---\\__(___)         |   stupid storm. So he decided to create a CLI game and this is
                     |   the output of that bullshit.
     _______         |
 ___/   ____)____    |       Rock Paper Scissors is a popular game that is taught to
           ______)   |   children at a young age. One of the very first games that we
            ______)  |   learned about albeit in school or at home. This is a heavily
           ______)   |   designed version of that game that incorporates random CLI and
-----\_________)     |   ASCII art to make this kind of interface
+----\\_________)     |   ASCII art to make this kind of interface
                     |
     _______         |                               RULES
 ___/   ____)____    |                       * ROCK -> SCISSORS
           ______)   |                       * SCISSORS -> PAPER
         _________)  |                       * PAPER -> ROCK
         (____)      |       this game is just a random practive my DAN so please
-----\___(___)       |   don't take this rendition seriously and say some stupid things
+----\\___(___)       |   don't take this rendition seriously and say some stupid things
                     |   to the creatlor.
 """
 

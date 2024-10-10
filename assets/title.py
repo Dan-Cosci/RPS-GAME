@@ -9,21 +9,21 @@ import pyfiglet
 
 
 # the list of images used for graphic
-game_images = ['''
+game_images_right = ['''    ROCK
     _______
 ___/   ____)
       (_____)
       (_____)
       (____)
 ---\\__(___)
-''','''
+''','''     PAPER
     _______
 ___/   ____)____
           ______)
            ______)
           ______)
 ----\\_________)
-''','''
+''','''     SCISSORS
     _______
 ___/   ____)____
           ______)
@@ -33,6 +33,40 @@ ___/   ____)____
 '''
 ]
 
+game_images_left = ['''     ROCK
+       _______
+      (____   \\___
+     (_____)    
+     (_____)    
+      (____)     
+       (___)__/---
+''','''     PAPER
+       _______
+  ____(____   \\___
+ (______          
+(______         
+ (______         
+   (__________/----
+''','''     SCISSORS
+       _______
+  ____(____   \\___
+ (______          
+(_________      
+    (____)        
+     (___)___/---- 
+'''
+]
+
+
+image_long = f"""   ROCK                PAPER               SCISSORS
+    _______            _______             _______    
+___/   ____)      ___/    ____)____    ___/   ____)____
+      (_____)                ______)             ______)    
+      (_____)                 ______)          _________)   
+      (____)                 ______)          (____)      
+---\\__(___)      ----\\_________)      ----\\___(___) 
+
+"""
 
 # title screen print text
 title_screen = f"""
@@ -66,9 +100,7 @@ comp_wins = pyfiglet.figlet_format("Computer wins the round!")
 win_text = pyfiglet.figlet_format("YOU WIN!")
 lose_text = pyfiglet.figlet_format("YOU LOST YOU SUCK")
 
-instru_game = f"""
-
-                INSTRUCTIONS:
+instru_game = f"""                  INSTRUCTIONS:
         choose from the choices provide
                     r - rock
                     p - paper

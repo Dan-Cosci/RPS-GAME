@@ -4,8 +4,6 @@ it looks somewhat presentable with the CLI
 and yes I know this is a bit overkill
 """
 
-# initializes piglet font used for victory or defeats
-import pyfiglet
 
 
 # the list of images used for graphic
@@ -33,29 +31,83 @@ ___/   ____)____
 '''
 ]
 
-game_images_left = ['''     ROCK
-       _______
-      (____   \\___
-     (_____)    
-     (_____)    
-      (____)     
-       (___)__/---
-''','''     PAPER
-       _______
-  ____(____   \\___
- (______          
-(______         
- (______         
-   (__________/----
-''','''     SCISSORS
-       _______
-  ____(____   \\___
- (______          
-(_________      
-    (____)        
-     (___)___/---- 
+combinations_rock = ['''    ROCK                    ROCK
+    _______            _______
+___/   ____)          (____   \\___
+      (_____)        (_____)
+      (_____)        (_____)
+      (____)          (____)
+---\\__(___)            (___)__/---
+''',
+'''    ROCK                    PAPER
+    _______                 _______
+___/   ____)           ____(____   \\___
+      (_____)        (______
+      (_____)        (______
+      (____)          (______
+---\\__(___)            (__________/---
+''',
+'''    ROCK                    SCISSORS
+    _______                 _______
+___/   ____)           ____(____   \\___
+      (_____)         (______
+      (_____)        (______
+      (____)             (____)
+---\\__(___)               (___)___/----
 '''
 ]
+combinations_paper = ['''    PAPER                   ROCK
+    _______              _______
+___/   ____)____       (____    \\___
+          ______)     (_____)
+           ______)    (_____)
+          ______)      (____)
+----\\_________)         (___)__/---
+''',
+'''    PAPER                   PAPER
+    _______               _______
+___/   ____)____     ____(____   \\___
+          ______)   (______
+           ______)  (______
+          ______)    (______
+----\\_________)       (__________/---
+''',
+'''    PAPER                   SCISSORS
+    _______               _______
+___/   ____)____     ____(____   \\___
+          ______)   (______
+           ______)  (_____
+          ______)      (____)
+----\\_________)         (___)___/----
+'''
+]
+
+combinations_scissors = ['''    SCISSORS                ROCK
+    _______               _______
+___/   ____)____         (____   \\___
+          ______)       (_____)
+        _________)      (_____)
+        (____)           (____)
+----\\___(___)             (___)__/---
+''',
+'''    SCISSORS                PAPER
+    _______               _______
+___/   ____)____     ____(____   \\___
+          ______)   (______
+        _________)  (______
+        (____)       (______
+----\\___(___)         (__________/---
+''',
+'''    SCISSORS              SCISSORS
+    _______               _______
+___/   ____)____     ____(____   \\___
+          ______)   (______
+        _________)  (_________
+        (____)         (____)
+----\\___(___)           (___)___/----
+'''
+]
+
 
 
 image_long = f"""   ROCK                PAPER               SCISSORS
@@ -94,12 +146,6 @@ ___/   ____)____    |                       * ROCK -> SCISSORS
 """
 
 
-player_wins = pyfiglet.figlet_format("Player wins the round!")
-comp_wins = pyfiglet.figlet_format("Computer wins the round!")
-
-win_text = pyfiglet.figlet_format("YOU WIN!")
-lose_text = pyfiglet.figlet_format("YOU LOST YOU SUCK")
-
 instru_game = f"""                  INSTRUCTIONS:
         choose from the choices provide
                     r - rock
@@ -113,12 +159,7 @@ def main_test():
     for i in range (3):
         print(game_images_left[i])
         print(game_images_right[i])
-    print(player_wins)
-    print(comp_wins)
     print(instru_game)
-
-
-    print(win_text, lose_text)
 
 if __name__ == "__main__":
     main_test()

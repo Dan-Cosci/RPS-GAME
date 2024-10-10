@@ -1,3 +1,5 @@
+from assets import text_banner
+
 values = {
    "r":0,
    "p":1,
@@ -18,3 +20,11 @@ def checker(input_1, input_2):
         return "p"
     else:
         return "c"
+    
+def win_check(char_input):
+    if char_input == 'p':
+        print(text_banner.player_wins)
+    if char_input == 'c':
+        print(text_banner.comp_wins)
+    if char_input == 't':
+        print(text_banner.tie)

@@ -88,9 +88,9 @@ ___/   ____)____    |       Rock Paper Scissors is a popular game that is taught
 ___/   ____)____    |                       * ROCK -> SCISSORS
           ______)   |                       * SCISSORS -> PAPER
         _________)  |                       * PAPER -> ROCK
-        (____)      |       this game is just a random practive my DAN so please
+        (____)      |       this game is just a random practice by DAN so please
 ----\\___(___)       |   don't take this rendition seriously and say some stupid things
-                    |   to the creatlor.
+                    |   to the creator.
 """
 
 
@@ -111,7 +111,8 @@ instru_game = f"""                  INSTRUCTIONS:
 def main_test():
     print(title_screen)
     for i in range (3):
-        print(game_images[i])
+        print(game_images_left[i])
+        print(game_images_right[i])
     print(player_wins)
     print(comp_wins)
     print(instru_game)

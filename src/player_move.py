@@ -3,8 +3,11 @@ this is a program that enables the player
 to move and allow the player a given action
 """
 
-# imports the list of choices
-from logic import values
+values = {
+   "r":0,
+   "p":1,
+   "s":2
+}
 
 # the function that is gonna be used
 def p_move():

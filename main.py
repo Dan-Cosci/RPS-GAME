@@ -1,4 +1,4 @@
-from assets import title
+from assets import title, text_banner
 from src import player_move, computer_logic, condition
 import os
 import time
@@ -13,22 +13,49 @@ values = {
    "s":2
 }
 
-def game():
+def round():
     print(title.title_screen)
     play = input("Press <enter> to play and type <q> to quit: ")
     
     if play == 'q':
         sys.exit("thankyouforplaying")
+    
+    player = 0
+    computer = 0
+
+    rounds = get_int("how may rounds would you like to play?: ")
+    for round in range(rounds):
+        winner = game()
+        time.sleep(2)
+        if winner == 'p':
+            player += 1
+        elif winner == 'c':
+            computer += 1
+        else:
+            continue
+
+    if player > computer:
+        print(text_banner.win_text)
+    elif player < computer:
+        print(text_banner.lose_text)
+    else:
+        print(text_banner.tie)           
+
+
+def game():
+    
     # time.sleep(2)
 
     player = choice()
 
     oppnt = com()
+    time.sleep(2)
+    os.system("cls")
     
     char = condition.checker(player,oppnt)
     face_off(player, oppnt)
     condition.win_check(char)
-    print(char)
+    return char
 
 def choice():
     while True:
@@ -74,4 +101,13 @@ def face_off(player,com):
     if player == 's':
         print(title.combinations_scissors[values[com]])
 
-game()
+def get_int(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except:
+            pass
+        else:
+            break
+
+round()

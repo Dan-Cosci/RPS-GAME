@@ -153,13 +153,3 @@ instru_game = f"""                  INSTRUCTIONS:
                     s - scissors
 """
 
-
-def main_test():
-    print(title_screen)
-    for i in range (3):
-        print(game_images_left[i])
-        print(game_images_right[i])
-    print(instru_game)
-
-if __name__ == "__main__":
-    main_test()
